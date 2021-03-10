@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" 
-          href="{% static 'website/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script rel="text/javascript" src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
+    <script rel="text/javascript" src="{% static 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap-icons/font/bootstrap-icons.css' %}">
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <div class="container">
+        {% include 'includes/navbar.html'%}
+        
+        {% block content %}
+        {% endblock %}
+
+    </div>
 </body>
 </html>

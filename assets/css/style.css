@@ -1,0 +1,22 @@
+#navSearch{
+    border-radius: 6px;
+}
+nav .navbar-nav li a{
+    color: black !important;
+}
+#navSearchBtn{
+    border: none;
+}
+
+@media screen and (max-width: 992px) {
+  #navSearch{
+    width: 80px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    background-color: white;
+  }
+  #navSearch:focus {
+    width: 80%;
+    display: inline-block;
+  }
+}
