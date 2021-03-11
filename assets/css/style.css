@@ -20,3 +20,15 @@ nav .navbar-nav li a{
     display: inline-block;
   }
 }
+.errorContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: aqua;
+}
+.errorContainer h1,p{
+    font-weight: bolder;
+    font-size: 50px;
+}
