@@ -1,0 +1,39 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">bcommerce</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline ml-auto mr-auto">
+        <input class="form-control" id="navSearch" type="search" placeholder="Search" aria-label="Search" size=45>
+        <button type="button" id="navSearchBtn" type="submit" class="btn btn-outline-secondary"><em
+            class="bi bi-search"></em></button>
+      </form>
+
+      <div class="dropdown" id="dropdownAccount">
+        <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div id="navAccount">
+            <em class="bi bi-person"></em>
+            <div>
+              <span id="loginNavText">Login</span>
+              <span id="signupNavText"> or Signup</span>
+            </div>
+            <span class="dropdown-toggle" id="accountToggle"></span>
+          </div>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Login</a>
+          <a class="dropdown-item" href="#">Sign up</a>
+        </div>
+      </div>
+      <div class="shoppingCart">
+        <a class="btn btn-secondary" id="cartBtn" type="button">
+          <em class="bi bi-cart3">
+          </em><span>Cart</span>
+        </a>
+      </div>
+  </nav>
+</div>

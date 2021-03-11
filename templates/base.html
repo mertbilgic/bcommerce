@@ -8,14 +8,14 @@
     {% include 'includes/stylesheet.html'%}
 </head>
 <body>
+    {% include 'includes/navbar.html'%}
+
     <div class="container">
-        {% include 'includes/navbar.html'%}
-        
         {% block content %}
         {% endblock %}
-
-        {% include 'includes/footer.html'%}
-        {% include 'includes/scripts.html'%}
     </div>
+
+    {% include 'includes/footer.html'%}
+    {% include 'includes/scripts.html'%}
 </body>
 </html>
