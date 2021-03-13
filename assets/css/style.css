@@ -99,4 +99,46 @@ nav .navbar-nav li a{
 .categoriesContainer a{
   color: #646464;
 }
-
+.productCard{
+  border: solid;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #E9E9E9;
+}
+.productCard .productTitle {
+  overflow: hidden;
+  width: 150px;
+  height: 28px;
+  font-size: 12px;
+  line-height: normal;
+  padding: 0px 4px;
+}
+.productCard .productTitle span{
+  padding: 0px 4px;
+}
+.productCard div{
+  margin-bottom: 5px;
+}
+.productİmage img{
+  height: 100%; 
+  width: 100%; 
+  object-fit: contain;
+}
+.productPrice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+}
+.addToCart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addToCart a{
+  background-color: #F89A5E;
+}
