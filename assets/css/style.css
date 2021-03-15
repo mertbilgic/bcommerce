@@ -105,10 +105,16 @@ nav .navbar-nav li a{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   border-radius: 10px;
   border-color: #E9E9E9;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 .productCard .productTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   width: 150px;
   height: 28px;
@@ -118,6 +124,8 @@ nav .navbar-nav li a{
 }
 .productCard .productTitle span{
   padding: 0px 4px;
+  width: 150px;
+  height: 28px;
 }
 .productCard div{
   margin-bottom: 5px;
@@ -141,4 +149,9 @@ nav .navbar-nav li a{
 }
 .addToCart a{
   background-color: #F89A5E;
+}
+.prodcutContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

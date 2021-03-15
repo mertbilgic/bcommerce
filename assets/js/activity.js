@@ -1,11 +1,11 @@
 var productCard = null;
 
 function cloneDiv(id) {
-  let div = document.getElementById(id);
+  let div = document.getElementById(id).getElementsByClassName('productPrice')[0];
 
   return div.cloneNode(true);
 }
-function addCartButton() {
+function addCartButton(id) {
   var addToCartDiv = document.createElement("div");
   addToCartDiv.className = "addToCart";
   addToCartDiv.id = "addToCart";
@@ -15,15 +15,15 @@ function addCartButton() {
   addToCartBtn.className = "btn";
 
   addToCartDiv.appendChild(addToCartBtn);
-  document.getElementById("productCardPrice").appendChild(addToCartDiv);
+  document.getElementById(id).appendChild(addToCartDiv);
 }
 
-document.getElementById("productCard").onmouseover = function () {
-  productCard = cloneDiv("productPrice");
-  document.getElementById("productPrice").remove();
-  addCartButton();
+function CardBtnShow(id) {
+  productCard = cloneDiv(id);
+  document.getElementById(id).getElementsByClassName('productPrice')[0].remove();
+  addCartButton(id);
 };
-document.getElementById("productCard").onmouseout = function () {
-  document.getElementById("addToCart").remove();
-  document.getElementById("productCardPrice").appendChild(productCard);
+function priceShow(id) {
+  document.getElementById(id).getElementsByClassName('addToCart')[0].remove();
+  document.getElementById(id).appendChild(productCard);
 };
