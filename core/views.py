@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 
+from products.models import Product
 def home(request):
     mock_data = {
         "products":[
@@ -10,3 +12,7 @@ def home(request):
             ]
     }
     return render(request,"core/home.html",{'data':mock_data})
+class HomeView(ListView):
+    model = Product
+    paginate_by = 10
+    template_name = "core/home.html"

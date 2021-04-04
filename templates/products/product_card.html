@@ -1,14 +1,15 @@
 {% load static %}
 {% load uihelper %}
+{% static "" as static_path %}
 <div class="prodcutContainer">
-    {% for product in data.products%}
+    {% for product in products%}
     {% define_item_id forloop.counter as item_id %}
     <div class="productCard" id="{{item_id}}" onmouseover="CardBtnShow('{{item_id}}')" onmouseout="priceShow('{{item_id}}')">
         <div class="productTitle">
             <span>{{product.title}}</span>
         </div>
         <div class="productİmage">
-            <img alt="{{product.title}}" src="{% static product.img %}">
+            <img alt="{{product.title}}" src="{{static_path}}img/{{product.image}}">
         </div>
         <div class="productPrice" id="productCardPrice">
             <a id="productPrice">{{product.price}} TL</a>
