@@ -12,23 +12,26 @@
         <button type="button" id="navSearchBtn" type="submit" class="btn btn-outline-secondary"><em
             class="bi bi-search"></em></button>
       </form>
-
-      <div class="dropdown" id="dropdownAccount">
-        <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div id="navAccount">
-            <em class="bi bi-person"></em>
-            <div>
-              <span id="loginNavText">Login</span>
-              <span id="signupNavText"> or Signup</span>
+      {% if user.is_authenticated %}
+      <a class="btn btn-secondary" type="button" href="/logout" id="logoutButton" >Logout</a>
+      {% else %}
+        <div class="dropdown" id="dropdownAccount">
+          <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div id="navAccount">
+              <em class="bi bi-person"></em>
+              <div>
+                <span id="loginNavText"></a>Login</span>
+                <span id="signupNavText"> or Signup</span>
+              </div>
+              <span class="dropdown-toggle" id="accountToggle"></span>
             </div>
-            <span class="dropdown-toggle" id="accountToggle"></span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="login/">Login</a>
+            <a class="dropdown-item" href="register/">Sign up</a>
           </div>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Login</a>
-          <a class="dropdown-item" href="#">Sign up</a>
         </div>
-      </div>
+      {% endif %}
       <div class="shoppingCart">
         <a class="btn btn-secondary" id="cartBtn" type="button">
           <em class="bi bi-cart3">

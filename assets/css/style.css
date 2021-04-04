@@ -54,6 +54,9 @@ nav .navbar-nav li a{
 #dropdownMenuButton{
   padding: 1px 15px;
 }
+#logoutButton{
+  padding: 8.3px;
+}
 #cartBtn{
   display: flex;
   justify-content: center;
