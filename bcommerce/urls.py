@@ -21,6 +21,7 @@ from accounts.views import RegisterViews,LoginView
 
 urlpatterns = [
     path('',include('core.urls')),
+    path('',include('products.urls')),
     path('accounts/',include('accounts.urls')),
     path('register/',RegisterViews.as_view(), name='register'),
     path('login/',LoginView.as_view(), name='login'),

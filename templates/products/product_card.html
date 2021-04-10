@@ -5,15 +5,17 @@
     {% for product in products%}
     {% define_item_id forloop.counter as item_id %}
     <div class="productCard" id="{{item_id}}" onmouseover="CardBtnShow('{{item_id}}')" onmouseout="priceShow('{{item_id}}')">
-        <div class="productTitle">
-            <span>{{product.title}}</span>
-        </div>
-        <div class="productİmage">
-            <img alt="{{product.title}}" src="{{static_path}}img/{{product.image}}">
-        </div>
-        <div class="productPrice" id="productCardPrice">
-            <a id="productPrice">{{product.price}} TL</a>
-        </div>
+        <a title="{{product.title}}" href="product/{{product.slug}}">
+            <div class="productTitle">
+                <span>{{product.title}}</span>
+            </div>
+            <div class="productİmage">
+                <img alt="{{product.title}}" src="{{static_path}}img/{{product.image}}">
+            </div>
+            <div class="productPrice" id="productCardPrice">
+                <a id="productPrice">{{product.price}} TL</a>
+            </div>
+        </a>
     </div>
     {% endfor %}
 </div>

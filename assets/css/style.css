@@ -105,21 +105,25 @@ nav .navbar-nav li a{
 .productCard{
   border: solid;
   width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   border-radius: 10px;
   border-color: #E9E9E9;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+.productCard,a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none !important;
+  color: black !important;
 }
 .productCard .productTitle {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 150px;
+  width: 135px;
   height: 28px;
   font-size: 12px;
   line-height: normal;
