@@ -1,10 +1,28 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}
-  
-{% endblock title %}
+{% block title %}{{object.title}}{% endblock title %}
 
 
 {% block content %}
-  <h1>Test</h1>
+
+<div class="productDetailCard">
+  <div class="productCardImage">
+    <img alt="{{object.title}}" src="{% static ''%}img/{{object.image}}">
+  </div>
+  <div class="productCardInfo">
+    <h3>{{object.title}}</h3>
+    <div class="product-price"> 
+      Price:<span>{{object.price}} TL</span>
+    </div>
+    <div class="product-description">
+      <h5>Product Description</h5>
+      {{object.description}}
+    </div>
+    <div class="addToCard">
+      <a class="btn btn-success form-control">Add To Cart</a>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
